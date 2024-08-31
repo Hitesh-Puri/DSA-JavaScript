@@ -1,5 +1,5 @@
 /**
- * 1. Longest Substring Without Repeating Characters
+ * Longest Substring Without Repeating Characters
   - Problem: Given a string, find the length of the longest substring without repeating characters.
   Example:
   Input: "abcabcbb"
@@ -19,13 +19,17 @@ function lengthOfLongestSubstring(s) {
     }
     map.set(char, right);
     maxLen = Math.max(maxLen, right - left + 1);
+    console.log(map)
   }
 
   return maxLen;
 }
 
-const Substring = "abcabcbbabc";
+const Substring = "abcabc";
 
 console.log(lengthOfLongestSubstring(Substring)); // Output: 3
 
 // We use a sliding window approach, with a map to track the last index of each character. When a repeated character is found, we adjust the start position of the window.
+
+// What is a subsctring?
+// A substring is a contiguous part of a string. For example, "abc" is a substring of "abcdefg".
